@@ -4,7 +4,9 @@ Bash script to optimize high-res video (like 4K60fps) for Instagram Stories. For
 
 ## dependencies
 
-* `ffmpeg`
+```bash
+ffmpeg --help
+```
 
 ## usage
 
