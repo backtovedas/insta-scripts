@@ -8,7 +8,7 @@ fi
 
 INPUT="$1"
 # Create output filename by appending _ig to the original name
-OUTPUT="${INPUT%.*}_ig.mp4"
+OUTPUT="${INPUT%.*}_ig-story.mp4"
 
 # Execute FFmpeg with Instagram-optimized parameters
 ffmpeg -i "$INPUT" \
@@ -17,7 +17,7 @@ ffmpeg -i "$INPUT" \
   -profile:v high \
   -preset slow \
   -crf 23 \
-  -maxrate 5M -bufsize 10M \
+  -maxrate 8M -bufsize 10M \
   -pix_fmt yuv420p \
   -c:a aac -b:a 128k -ar 44100 -ac 2 \
   "$OUTPUT"
